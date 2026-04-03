@@ -2,6 +2,7 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: HttpRoute
 metadata:
   name: keycloak
+  namespace: team3-ns
 spec:
   parentRefs:
   - name: kgateway
