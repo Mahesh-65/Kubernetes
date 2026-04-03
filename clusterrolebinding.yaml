@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: mahesh-cluster-pod-access
+subjects:
+- kind: User
+  name: mahesh
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-pod-manager
+  apiGroup: rbac.authorization.k8s.io
