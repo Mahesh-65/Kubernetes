@@ -6,7 +6,10 @@ subjects:
 - kind: User
   name: mahesh
   apiGroup: rbac.authorization.k8s.io
+- kind: ServiceAccount
+  name: mahesh-sa
+  namespace: team3-ns
 roleRef:
   kind: ClusterRole
-  name: cluster-pod-manager
+  name: mahesh-cluster-role
   apiGroup: rbac.authorization.k8s.io
