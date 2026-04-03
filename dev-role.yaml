@@ -5,5 +5,9 @@ metadata:
   namespace: team3-ns
 rules:
 - apiGroups: [""]
-  resources: ["pods", "deployments"]
+  resources: ["pods"]
+  verbs: ["get", "list", "watch", "create", "update", "delete"]
+
+- apiGroups: ["apps"]
+  resources: ["deployments"]
   verbs: ["get", "list", "watch", "create", "update", "delete"]
