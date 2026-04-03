@@ -1,17 +1,16 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: gateway.networking.k8s.io/v1
 kind: HttpRoute
 metadata:
   name: keycloak
   namespace: team3-ns
 spec:
+  parentRefs:
+  - name: kgateway
   rules:
-  - host: keycloak.example.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: keycloak
-            port:
-              number: 8080
+  - matches:
+      - path:
+          type: PathPrefix
+          value: /
+    backendRefs:
+      - name: keycloak
+        port: 8080
