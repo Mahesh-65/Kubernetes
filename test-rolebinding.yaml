@@ -5,7 +5,7 @@ metadata:
   namespace: team3-ns
 subjects:
 - kind: Group
-  name: testing-group
+  name: testers
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
